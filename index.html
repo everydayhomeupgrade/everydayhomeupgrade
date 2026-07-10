@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>~*~ Hello Sabrina ~*~</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+    text-align: center;
+    color: #ffff00;
+    overflow-x: hidden;
+  }
+
+  /* Flashing rainbow background */
+  body {
+    animation: bgflash 0.6s infinite;
+  }
+  @keyframes bgflash {
+    0%   { background-color: #ff0000; }
+    16%  { background-color: #ff9900; }
+    33%  { background-color: #ffff00; }
+    50%  { background-color: #00ff00; }
+    66%  { background-color: #0099ff; }
+    83%  { background-color: #6600ff; }
+    100% { background-color: #ff00ff; }
+  }
+
+  .starfield {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image:
+      radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+      radial-gradient(2px 2px at 120px 80px, #fff, transparent),
+      radial-gradient(1px 1px at 200px 150px, #fff, transparent),
+      radial-gradient(2px 2px at 300px 60px, #fff, transparent),
+      radial-gradient(1px 1px at 80px 200px, #fff, transparent);
+    background-repeat: repeat;
+    background-size: 350px 250px;
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .content { position: relative; z-index: 1; padding: 20px; }
+
+  /* Giant blinking rainbow title */
+  h1 {
+    font-size: 5rem;
+    margin: 20px 0;
+    animation: titlecolor 0.4s infinite, wobble 2s infinite ease-in-out;
+    text-shadow: 3px 3px 0 #000, -3px -3px 0 #ff00ff;
+    font-weight: bold;
+  }
+  @keyframes titlecolor {
+    0%   { color: #ffff00; }
+    25%  { color: #00ffff; }
+    50%  { color: #ff00ff; }
+    75%  { color: #00ff00; }
+    100% { color: #ff0000; }
+  }
+  @keyframes wobble {
+    0%, 100% { transform: rotate(-3deg) scale(1); }
+    50%      { transform: rotate(3deg) scale(1.1); }
+  }
+
+  .blink { animation: blink 1s step-start infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  marquee { font-size: 1.5rem; font-weight: bold; }
+
+  .construction {
+    font-size: 2rem;
+    color: #000;
+    background: repeating-linear-gradient(45deg, #ffff00, #ffff00 20px, #000 20px, #000 40px);
+    padding: 10px 0;
+    margin: 25px 0;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff;
+  }
+  .construction span {
+    background: #ffff00;
+    padding: 4px 10px;
+    display: inline-block;
+    border: 3px outset #999;
+  }
+
+  .badge {
+    display: inline-block;
+    background: #000080;
+    color: #00ff00;
+    border: 3px outset #4444ff;
+    padding: 6px 12px;
+    margin: 8px;
+    font-size: 0.9rem;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+  }
+
+  .counter {
+    background: #000;
+    color: #00ff00;
+    font-family: "Courier New", monospace;
+    font-size: 1.4rem;
+    display: inline-block;
+    padding: 6px 14px;
+    border: 4px inset #00ff00;
+    letter-spacing: 4px;
+    margin: 15px 0;
+  }
+
+  .flames {
+    font-size: 2.5rem;
+    animation: flamecolor 0.3s infinite;
+  }
+  @keyframes flamecolor {
+    0% { color: #ff0000; } 50% { color: #ff9900; } 100% { color: #ffff00; }
+  }
+
+  a { color: #00ffff; }
+
+  hr {
+    border: none;
+    height: 5px;
+    background: linear-gradient(to right, #ff0000, #ffff00, #00ff00, #00ffff, #ff00ff);
+    margin: 20px auto;
+    width: 80%;
+  }
+
+  .webring {
+    font-size: 0.85rem;
+    color: #fff;
+    background: #000;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px ridge #888;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="starfield"></div>
+<div class="content">
+
+  <marquee behavior="alternate" scrollamount="12">
+    <span class="flames">🔥</span> WELCOME 2 MY HOMEPAGE <span class="flames">🔥</span> ~*~*~*~ THANKS 4 VISITING ~*~*~*~
+  </marquee>
+
+  <h1>Hello Sabrina</h1>
+
+  <p class="blink" style="font-size:1.8rem; color:#ffffff; text-shadow:2px 2px 0 #000;">
+    ★彡 U R the BEST 彡★
+  </p>
+
+  <div class="construction">
+    <span>🚧 UNDER CONSTRUCTION 🚧</span>
+  </div>
+
+  <marquee behavior="scroll" direction="left" scrollamount="8" style="color:#00ff00; text-shadow:1px 1px 0 #000;">
+    ◄◄◄ This site is best viewed in Netscape Navigator 4.0 at 800x600 resolution ►►►
+    Sign my guestbook!!!  Don't forget 2 bookmark this page!!!  ♥♥♥
+  </marquee>
+
+  <hr>
+
+  <p style="color:#fff; font-size:1.2rem; text-shadow:1px 1px 0 #000;">You are visitor number:</p>
+  <div class="counter">0 0 0 0 0 1</div>
+
+  <hr>
+
+  <div>
+    <span class="badge">✉ EMAIL ME</span>
+    <span class="badge">📖 GUESTBOOK</span>
+    <span class="badge">🔗 LINKS</span>
+    <span class="badge">⭐ FAVES</span>
+  </div>
+
+  <div>
+    <span class="badge" style="background:#000; color:#fff; border-color:#fff;">Made with Notepad</span>
+    <span class="badge" style="background:#800080; color:#ffff00; border-color:#ff00ff;">Netscape NOW!</span>
+    <span class="badge" style="background:#008080; color:#fff; border-color:#0ff;">HTML 4.0</span>
+  </div>
+
+  <div class="webring">
+    ⟨ prev ⟩ &nbsp; ★ part of the SUPER COOL webring ★ &nbsp; ⟨ next ⟩
+  </div>
+
+  <marquee behavior="alternate" scrollamount="20" style="margin-top:25px;">
+    <span class="flames">💾💿📀💾💿📀💾💿📀</span>
+  </marquee>
+
+  <p style="color:#fff; font-size:0.8rem; margin-top:20px; text-shadow:1px 1px 0 #000;">
+    © 2001 &nbsp;|&nbsp; This page last updated: never
+  </p>
+
+</div>
+</body>
+</html>
